@@ -5,6 +5,7 @@ public:
 	long long multiplyLong(long long a, long long b, long long mod);
 	long long pow_mod(long long a, long long b, long long mod);
 	int gcd(int a,int b);
+	int lcm(int a,int b);
 };
 
 
@@ -48,4 +49,8 @@ long long MathHelper::pow_mod(long long a, long long b, long long mod) {
 
 int MathHelper::gcd(int a,int b) {
 	return b?gcd(b,a%b):a;
+}
+
+int lcm(int a,int b) {
+	return (a*b)/gcd(a,b);
 }
